@@ -158,15 +158,38 @@ export default function Portfolio() {
   ];
 
   const skillsRow1 = [
-    "Python", "Next.js", "Hugging Face", "Docker", "Splunk",
-    "C++", "Flask", "Pandas", "AWS", "Nessus",
-    "JavaScript", "React", "NumPy", "PostgreSQL", "Wireshark"
+    { name: "Python", icon: "🐍" },
+    { name: "Next.js", icon: "⚡" },
+    { name: "Hugging Face", icon: "🤗" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Splunk", icon: "📊" },
+    { name: "C++", icon: "⚙️" },
+    { name: "Flask", icon: "🌶️" },
+    { name: "Pandas", icon: "🐼" },
+    { name: "AWS", icon: "☁️" },
+    { name: "Nessus", icon: "🔍" },
+    { name: "JavaScript", icon: "🟨" },
+    { name: "React", icon: "⚛️" },
+    { name: "NumPy", icon: "🔢" },
+    { name: "PostgreSQL", icon: "🐘" },
+    { name: "Wireshark", icon: "🦈" }
   ];
   
   const skillsRow2 = [
-    "TypeScript", "TensorFlow", "OpenCV", "MongoDB", "Stripe API",
-    "PyTorch", "MediaPipe", "BigQuery", "Firebase",
-    "Python", "Next.js", "Hugging Face", "Docker", "Splunk"
+    { name: "TypeScript", icon: "🔷" },
+    { name: "TensorFlow", icon: "🧠" },
+    { name: "OpenCV", icon: "👁️" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "Stripe API", icon: "💳" },
+    { name: "PyTorch", icon: "🔥" },
+    { name: "MediaPipe", icon: "📹" },
+    { name: "BigQuery", icon: "📈" },
+    { name: "Firebase", icon: "🔥" },
+    { name: "Python", icon: "🐍" },
+    { name: "Next.js", icon: "⚡" },
+    { name: "Hugging Face", icon: "🤗" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Splunk", icon: "📊" }
   ];
 
   const hackathons = [
@@ -479,9 +502,10 @@ export default function Portfolio() {
                   {[...skillsRow1, ...skillsRow1].map((skill, index) => (
                     <div 
                       key={`row1-${index}`}
-                      className="inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80 flex-shrink-0"
+                      className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-300 border-transparent bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl hover:scale-105 flex-shrink-0"
                     >
-                      {skill}
+                      <span className="text-lg">{skill.icon}</span>
+                      <span>{skill.name}</span>
                     </div>
                   ))}
                 </div>
@@ -498,9 +522,10 @@ export default function Portfolio() {
                   {[...skillsRow2, ...skillsRow2].map((skill, index) => (
                     <div 
                       key={`row2-${index}`}
-                      className="inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors border-transparent bg-secondary text-secondary-foreground shadow hover:bg-secondary/80 flex-shrink-0"
+                      className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-300 border-transparent bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg hover:shadow-xl hover:scale-105 flex-shrink-0"
                     >
-                      {skill}
+                      <span className="text-lg">{skill.icon}</span>
+                      <span>{skill.name}</span>
                     </div>
                   ))}
                 </div>

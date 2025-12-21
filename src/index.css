@@ -36,9 +36,21 @@ code {
 }
 
 .animate-scroll-right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 40s linear infinite;
 }
 
 .animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 40s linear infinite;
+}
+
+/* Add subtle glow effect for skills */
+.animate-scroll-right > div,
+.animate-scroll-left > div {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.animate-scroll-right > div:hover,
+.animate-scroll-left > div:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 } 
