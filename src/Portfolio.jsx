@@ -63,7 +63,7 @@ export default function Portfolio() {
       period: "April 2025 – May 2025",
       location: "Remote",
       description: "Participated in the UR2PhD Undergraduate Research Training Course, a national program designed to prepare undergraduates for graduate studies in computer science by providing high-quality research experience and mentorship. As part of a small research team consisting of three peers and a faculty mentor, I actively engaged in a semester-long research project focused on computing-related topics.Through this program, I gained foundational skills in research methodologies, academic writing, and literature reviews. I learned how to analyze and interpret data, create effective visualizations, and present findings clearly to both technical and non-technical audiences. We were trained on how to structure and write formal research papers and practiced communicating our work through poster sessions and oral presentations.",
-      logo: "/logos/cra.jpeg",
+      logo: "/logos/CRA.jpeg",
       link: "https://www.cra.org/"
     },
     {
