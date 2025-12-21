@@ -8,26 +8,36 @@ export default function Portfolio() {
   const workExperience = [
     {
       id: 1,
+      company: "St. Olaf College",
+      role: "Information Security Analyst",
+      period: "Sep 2025 - Present",
+      location: "Northfield, MN",
+      description: "• Reduced critical security vulnerabilities by 40% through targeted remediation based on Nessus scans\n\n• Improved incident detection efficiency by 30% by monitoring and analyzing Splunk Enterprise Security logs\n\n• Supported security governance and incident response efforts aligned with the NIST IR framework",
+      logo: "/logos/olaf.png",
+      link: "https://wp.stolaf.edu/"
+    },
+    {
+      id: 2,
       company: "Tapay",
       role: "Software Engineering Intern",
       period: "June 2025 - Present",
       location: "Remote",
-      description: "As a Software Engineer at Tapay, I am responsible for designing, building, and maintaining the company's NFC-based payment dashboard using React, Next.js, and TailwindCSS. I manage real-time transaction tracking and billing interfaces to ensure a seamless user experience. I also develop backend APIs with Node.js, Express, and PostgreSQL to support user account management, billing logic, and transaction logs across over 1,000 merchants. Additionally, I containerize services with Docker and deploy scalable infrastructure on AWS, improving uptime and deployment speed by 30%.",
+      description: "• Built and maintained an NFC-based payment dashboard using React, Next.js, and TailwindCSS, supporting real-time transaction tracking and billing for 1,000+ merchants\n\n• Designed backend APIs with Node.js, Express, and PostgreSQL to handle user accounts, billing logic, and transaction logs at scale\n\n• Containerized services with Docker and deployed on AWS, improving uptime and reducing deployment time by ~30%",
       logo: "/logos/Tapay.png",
       link: "https://tapay.com/"
     },
     {
-      id: 2,
-      company: "Whitman College Computer Science Department",
-      role: "Research Assistant Internship",
-      period: "Jun 2025 - Present",
+      id: 3,
+      company: "Whitman College",
+      role: "Research Assistant",
+      period: "Jun 2025 - Aug 2025",
       location: "Walla Walla, WA",
-      description: "Collaborating with Professor Jordan Wirfs-Brock on developing tools and activities that support everyday sonic thinking using personal audio data. The project focuses on applying machine learning techniques such as source separation, detection, and pattern analysis to support reflective listening. Responsibilities include designing and testing data science activities, building prototype tools, conducting literature reviews, and contributing to a shared audio analysis notebook. Leveraged Python and Google Colab to make audio data science more accessible and human-centered.",
+      description: "• Built an ML-based perceptual sound classifier using MFCC features and an MLP model to analyze emotional characteristics of audio\n\n• Developed SoundDrop, a full-stack web app enabling real-time audio sharing and collaboration for 50+ users\n\n• Designed data pipelines and led workshops introducing audio-based HCI tools to student researchers",
       logo: "/logos/whitman.png",
       link: "https://whitman.edu/"
     },
     {
-      id: 3,
+      id: 4,
       company: "Whitman Health and Counseling Center",
       role: "Data Intern",
       period: "May 2025 - July 2025",
@@ -37,17 +47,17 @@ export default function Portfolio() {
       link: "https://whitman.edu/"
     },
     {
-      id: 4,
+      id: 5,
       company: "PwC",
-      role: "Remote PwC Nonprofit Consulting Externship",
-      period: "May 2025 – May 2025",
+      role: "Nonprofit Consulting Extern",
+      period: "May 2025",
       location: "Remote",
-      description: "As a Remote Extern with PwC and Extern, I collaborated with a nonprofit startup to strengthen their donor engagement strategy by building comprehensive donor profiles. I applied qualitative research and analytical frameworks to identify giving behaviors and preferences aligned with the organization's mission. My work involved sourcing and organizing verified contact and demographic information for over 150 potential donors, which directly supported the nonprofit's fundraising outreach and development efforts.",
+      description: "• Conducted data-driven donor research to support nonprofit fundraising strategy",
       logo: "/logos/pwc.png",
       link: "https://www.extern.com/"
     },
     {
-      id: 5,
+      id: 6,
       company: "Computing Research Association",
       role: "UR2PhD Research Training Program",
       period: "April 2025 – May 2025",
@@ -57,7 +67,7 @@ export default function Portfolio() {
       link: "https://www.cra.org/"
     },
     {
-      id: 6,
+      id: 7,
       company: "HeadStarter AI",
       role: "Software Engineering Fellow",
       period: "May 2024 - Aug 2024",
@@ -114,44 +124,38 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Mental Health Data Analysis Project",
-      description: "Collaborated with the campus health department to analyze 50,000+ student health survey records using Python in Google Colab. I was responsible for cleaning and processing multi-year datasets with 99% accuracy and creating demographic-based visualizations that uncovered key mental health and academic well-being trends, enabling the department to improve service targeting for the entire student population by 35%.",
-      tech: ["Python", "Google Colab", "Pandas", "NumPy", "Matplotlib", "Data Visualization"],
+      title: "SoundDrop — Real-Time Audio Research Platform",
+      description: "• Built a full-stack Flask + JavaScript platform enabling real-time audio collaboration and cross-device synchronization\n\n• Implemented automated audio processing pipelines (MP3/WAV conversion, MongoDB archiving, analytics)\n\n• Used in ongoing HCI research and workshops with 50+ participants",
+      tech: ["Flask", "JavaScript", "MongoDB", "Audio Processing", "Real-time Sync", "HCI"],
+      link: "https://github.com/Keysej",
+      period: "Jun 2025 - Aug 2025",
+      location: "Walla Walla, WA"
+    },
+    {
+      title: "Mental Health Data Analytics Dashboard",
+      description: "• Analyzed 50,000+ student health records using Python and Google Colab\n\n• Built automated ETL pipelines and demographic visualizations to uncover trends in mental health and academic well-being\n\n• Insights improved outreach targeting by ~35%",
+      tech: ["Python", "Google Colab", "ETL Pipelines", "Pandas", "NumPy", "Matplotlib", "Data Visualization"],
       link: "https://github.com/Keysej",
       period: "July 2025 - Aug 2025",
       location: "Walla Walla, WA"
     },
     {
-      title: "Fertilizer Recommendation System",
-      description: "Built a LightGBM-based multiclass classification model in Python to recommend the top 3 fertilizers for various soil, crop, and weather conditions. Implemented a full ML pipeline",
-      tech: ["Python","LightGBM", "Pandas","NumPy","Scikit-learn","Google Colab"],
-      link: "https://github.com/Keysej",
-      period: "Apr 2025",
-      location: "Remote"
-    },
-    {
-      title: "Native Plants AI Support",
-      description: "Developed a GenAI-powered assistant for the Walla Walla Native Plant Society using Next.js, OpenAI API, JavaScript, and MUI to answer gardening questions and educate plant enthusiasts in real-time. Integrated local plant guides and deployed to Vercel, increasing access to drought-tolerant and region-specific plant info by 55%.",
-      tech: ["Next.js", "OpenAI API", "JavaScript", "MUI", "Vercel"],
-      link: "https://walla-walla-native-plant-support.vercel.app/",
-      period: "Apr 2025 - Apr 2025",
-      location: "Walla Walla, WA"
-    },
-    {
       title: "Personal Stress Meter",
-      description: "Developed Personal Stress Meter, a computer vision-based wellness tool that estimates user stress levels in real-time by analyzing eyelid openness and blink patterns. The app detects eye landmarks, computes Eye Aspect Ratio (EAR), and generates continuous stress scores with live visual feedback. It also logs historical metrics for longitudinal trend analysis.",
-      tech: ["Python", "OpenCV", "Mediapipe", "Streamlit"],
+      description: "• Built a real-time wellness tool using OpenCV and MediaPipe to estimate stress from eye-blink patterns\n\n• Implemented EAR (Eye Aspect Ratio) metrics with live visualization and historical trend tracking\n\n• Designed with privacy-first principles for biometric data",
+      tech: ["Python", "OpenCV", "MediaPipe", "Streamlit", "Computer Vision", "Privacy Engineering"],
       link: "https://github.com/Keysej/Personal-Stress-Meter",
       period: "June 2025 - July 2025",
       location: "Remote"
     }
   ];
 
-  const skills = [
-    "Python", "C++", "JavaScript", "Next.js", "TypeScript", "TensorFlow", "PyTorch", 
-    "Hugging Face", "Stripe API", "MongoDB", "SQL", "Firebase", "Pinecone", "BigQuery", 
-    "Streamlit", "Mediapipe", "Tableau"
-  ];
+  const skillGroups = {
+    "Languages": ["Python", "C++", "JavaScript", "TypeScript"],
+    "Frameworks": ["Next.js", "Flask", "React", "TensorFlow", "PyTorch"],
+    "ML & Data": ["Hugging Face", "Pandas", "NumPy", "OpenCV", "MediaPipe", "BigQuery"],
+    "Backend & Infra": ["Docker", "AWS", "PostgreSQL", "MongoDB", "Firebase"],
+    "Security & Tools": ["Splunk", "Nessus", "Wireshark", "Stripe API"]
+  };
 
   const hackathons = [
     {
@@ -209,7 +213,7 @@ export default function Portfolio() {
                     animate={{ opacity: 1, y: 0 }}
                     className="inline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   >
-                    Hi, I'm Jimale 👋
+                    Software Engineer & Data Scientist
                   </motion.span>
                 </div>
                 <div className="flex">
@@ -219,7 +223,7 @@ export default function Portfolio() {
                     transition={{ delay: 0.2 }}
                     className="inline-block max-w-[600px] md:text-xl"
                   >
-                    A Software Engineer at Tapay. ML Research Assistant at Whitman College. Aspiring to become a Machine Learning Engineer. Strong interest in cloud computing and hands-on experience in Data Engineering.
+                    CS @ St. Olaf College · Building SoundDrop · Applied ML & AI Systems
                   </motion.span>
                 </div>
                 <div className="flex mt-2">
@@ -231,6 +235,39 @@ export default function Portfolio() {
                   >
                     Northfield, MN 55057 | jimalekeyse@gmail.com
                   </motion.span>
+                </div>
+                <div className="flex gap-3 mt-4">
+                  <motion.a
+                    href="#contact"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    Contact Me
+                  </motion.a>
+                  <motion.a
+                    href="https://github.com/Keysej"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                    className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    GitHub
+                  </motion.a>
+                  <motion.a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    View Resume
+                  </motion.a>
                 </div>
               </div>
               <div>
@@ -272,7 +309,7 @@ export default function Portfolio() {
           >
             <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
               <p>
-                I'm a Computer Science student at St. Olaf College with a strong foundation in machine learning, data science, and full-stack development. My experience spans from building NFC-based payment systems to developing AI-powered applications that solve real-world problems. I'm passionate about leveraging technology to create innovative solutions that make a meaningful impact.
+                Computer Science student at St. Olaf College with hands-on experience in cybersecurity, machine learning, and full-stack development. Currently reducing security vulnerabilities by 40% as an Information Security Analyst while building scalable payment systems at Tapay. I develop AI-powered applications and data analytics platforms that solve real-world problems for 50+ users and organizations.
               </p>
             </div>
           </motion.div>
@@ -418,16 +455,29 @@ export default function Portfolio() {
             >
               <h2 className="text-xl font-bold">Skills</h2>
             </motion.div>
-            <div className="flex flex-wrap gap-1">
-              {skills.map((skill, index) => (
+            <div className="space-y-3">
+              {Object.entries(skillGroups).map(([category, skills], categoryIndex) => (
                 <motion.div 
-                  key={skill}
+                  key={category}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2.8 + index * 0.05 }}
+                  transition={{ delay: 2.8 + categoryIndex * 0.1 }}
+                  className="space-y-2"
                 >
-                  <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">
-                    {skill}
+                  <h3 className="text-sm font-semibold text-muted-foreground">{category}:</h3>
+                  <div className="flex flex-wrap gap-1">
+                    {skills.map((skill, skillIndex) => (
+                      <motion.div 
+                        key={skill}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 2.8 + categoryIndex * 0.1 + skillIndex * 0.02 }}
+                      >
+                        <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">
+                          {skill}
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
                 </motion.div>
               ))}
