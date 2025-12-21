@@ -192,33 +192,18 @@ export default function Portfolio() {
     { name: "Splunk", icon: "📊" }
   ];
 
-  const hackathons = [
+  const experiments = [
     {
       id: 1,
-      name: "NVIDIA AI Workshop",
-      date: "March 2024",
-      location: "Walla Walla, Washington",
-      description: "Participated in a two-day NVIDIA AI Workshop led by Prof. Parteek Kumar from Washington State University. The workshop covered key deep learning topics such as CNNs, transfer learning, and NLP. After completing hands-on exercises and an assessment, I received an official NVIDIA certificate in “Fundamentals of Deep Learning",
-      logo: "/logos/nvidia.jpeg",
-      initial: "W"
+      title: "Kaggle Playground Series",
+      period: "Ongoing",
+      description: "• Built and iterated on ML pipelines for tabular prediction problems\n• Practiced feature engineering, model tuning, and validation strategies\n• Explored LightGBM, XGBoost, and neural baselines with leaderboard feedback"
     },
     {
       id: 2,
-      name: "CodePath x AmazonNext Design Challenge",
-      date: "May 2025",
-      location: "Virtual Event",
-      description: "Participated in the CodePath x AmazonNext Design Challenge, collaborating with a team to create innovative design solutions and present them to industry professionals. Focused on user experience design and creating impactful digital solutions.",
-      logo: "/logos/design next.png",
-      initial: "C"
-    },
-    {
-      id: 3,
-      name: "Kaggle Playground Series Competition",
-      date: "Ongoing",
-      location: "Online",
-      description: "Actively participating in Kaggle machine learning competitions, focusing on data science challenges and predictive modeling. Continuously improving skills in data preprocessing, feature engineering, and model optimization through competitive machine learning.",
-      logo: "/logos/kaggle.svg",
-      initial: "K"
+      title: "NVIDIA Deep Learning Institute — Fundamentals of Deep Learning",
+      period: "March 2024",
+      description: "• Completed hands-on training covering CNNs, transfer learning, and NLP\n• Applied concepts directly to academic and personal ML projects"
     }
   ];
 
@@ -608,9 +593,9 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Hackathons Section */}
-        <section id="hackathons" className="mb-16">
-          <div className="space-y-12 w-full py-12">
+        {/* Experiments & Competitions Section */}
+        <section id="experiments" className="mb-16">
+          <div className="space-y-8 w-full py-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -618,10 +603,10 @@ export default function Portfolio() {
             >
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Hackathons</div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">I like building things</h2>
+                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Experiments & Competitions</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ongoing Work</h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    I've tackled hackathons, competitions, and workshops—building AI tools, predictive models, and web apps under tight deadlines, while collaborating with diverse teams to solve real-world problems.
+                    Alongside coursework and internships, I actively experiment with machine learning systems, data pipelines, and competitive modeling to sharpen my applied skills.
                   </p>
                 </div>
               </div>
@@ -632,42 +617,25 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 4.0 }}
             >
-              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-                {hackathons.map((hackathon, index) => (
-                  <motion.li 
-                    key={hackathon.id}
+              <div className="space-y-6">
+                {experiments.map((experiment, index) => (
+                  <motion.div 
+                    key={experiment.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 4.2 + index * 0.2 }}
-                    className="relative ml-10 py-4"
+                    transition={{ delay: 4.2 + index * 0.1 }}
+                    className="rounded-lg bg-card text-card-foreground p-6 border"
                   >
-                    <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-                      <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
-                        <img 
-                          src={hackathon.logo} 
-                          alt={`${hackathon.name} logo`}
-                          className="flex h-full w-full items-center justify-center rounded-full object-cover"
-                          onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'flex';
-                          }}
-                        />
-                        <span className="flex h-full w-full items-center justify-center rounded-full bg-muted" style={{display: 'none'}}>
-                          {hackathon.initial}
-                        </span>
-                      </span>
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="font-semibold text-lg">{experiment.title}</h3>
+                      <span className="text-sm text-muted-foreground">{experiment.period}</span>
                     </div>
-                    <div className="flex flex-1 flex-col justify-start gap-1">
-                      <time className="text-xs text-muted-foreground">{hackathon.date}</time>
-                      <h2 className="font-semibold leading-none">{hackathon.name}</h2>
-                      <p className="text-sm text-muted-foreground">{hackathon.location}</p>
-                      <span className="prose dark:prose-invert text-sm text-muted-foreground">
-                        {hackathon.description}
-                      </span>
+                    <div className="text-sm text-muted-foreground whitespace-pre-line">
+                      {experiment.description}
                     </div>
-                  </motion.li>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           </div>
         </section>
