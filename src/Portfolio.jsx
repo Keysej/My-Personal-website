@@ -20,7 +20,7 @@ export default function Portfolio() {
       id: 2,
       company: "Tapay",
       role: "Software Engineering Intern",
-      period: "June 2025 - Present",
+      period: "June - Sept 2025",
       location: "Remote",
       description: "• Built and maintained an NFC-based payment dashboard using React, Next.js, and TailwindCSS, supporting real-time transaction tracking and billing for 1,000+ merchants\n\n• Designed backend APIs with Node.js, Express, and PostgreSQL to handle user accounts, billing logic, and transaction logs at scale\n\n• Containerized services with Docker and deployed on AWS, improving uptime and reducing deployment time by ~30%",
       logo: "/logos/Tapay.png",
