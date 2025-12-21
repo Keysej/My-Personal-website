@@ -146,6 +146,14 @@ export default function Portfolio() {
       link: "https://github.com/Keysej/Personal-Stress-Meter",
       period: "June 2025 - July 2025",
       location: "Remote"
+    },
+    {
+      title: "Native Plants AI Support",
+      description: "• Developed a GenAI-powered assistant for the Walla Walla Native Plant Society using Next.js and OpenAI API\n\n• Integrated local plant guides and deployed to Vercel for real-time gardening questions\n\n• Increased access to drought-tolerant and region-specific plant info by 55%",
+      tech: ["Next.js", "OpenAI API", "JavaScript", "MUI", "Vercel"],
+      link: "https://walla-walla-native-plant-support.vercel.app/",
+      period: "Apr 2025",
+      location: "Walla Walla, WA"
     }
   ];
 
@@ -258,7 +266,7 @@ export default function Portfolio() {
                     GitHub
                   </motion.a>
                   <motion.a
-                    href="/resume.pdf"
+                    href="/Jimale Keyse-2028 copy.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
