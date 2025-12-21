@@ -157,13 +157,17 @@ export default function Portfolio() {
     }
   ];
 
-  const skillGroups = {
-    "Languages": ["Python", "C++", "JavaScript", "TypeScript"],
-    "Frameworks": ["Next.js", "Flask", "React", "TensorFlow", "PyTorch"],
-    "ML & Data": ["Hugging Face", "Pandas", "NumPy", "OpenCV", "MediaPipe", "BigQuery"],
-    "Backend & Infra": ["Docker", "AWS", "PostgreSQL", "MongoDB", "Firebase"],
-    "Security & Tools": ["Splunk", "Nessus", "Wireshark", "Stripe API"]
-  };
+  const skillsRow1 = [
+    "Python", "Next.js", "Hugging Face", "Docker", "Splunk",
+    "C++", "Flask", "Pandas", "AWS", "Nessus",
+    "JavaScript", "React", "NumPy", "PostgreSQL", "Wireshark"
+  ];
+  
+  const skillsRow2 = [
+    "TypeScript", "TensorFlow", "OpenCV", "MongoDB", "Stripe API",
+    "PyTorch", "MediaPipe", "BigQuery", "Firebase",
+    "Python", "Next.js", "Hugging Face", "Docker", "Splunk"
+  ];
 
   const hackathons = [
     {
@@ -463,32 +467,44 @@ export default function Portfolio() {
             >
               <h2 className="text-xl font-bold">Skills</h2>
             </motion.div>
-            <div className="space-y-3">
-              {Object.entries(skillGroups).map(([category, skills], categoryIndex) => (
-                <motion.div 
-                  key={category}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2.8 + categoryIndex * 0.1 }}
-                  className="space-y-2"
-                >
-                  <h3 className="text-sm font-semibold text-muted-foreground">{category}:</h3>
-                  <div className="flex flex-wrap gap-1">
-                    {skills.map((skill, skillIndex) => (
-                      <motion.div 
-                        key={skill}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 2.8 + categoryIndex * 0.1 + skillIndex * 0.02 }}
-                      >
-                        <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">
-                          {skill}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+            <div className="space-y-4 overflow-hidden">
+              {/* First Row - Moving Right */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.8 }}
+                className="relative overflow-hidden"
+              >
+                <div className="flex animate-scroll-right gap-3 whitespace-nowrap">
+                  {[...skillsRow1, ...skillsRow1].map((skill, index) => (
+                    <div 
+                      key={`row1-${index}`}
+                      className="inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80 flex-shrink-0"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Second Row - Moving Left */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 3.0 }}
+                className="relative overflow-hidden"
+              >
+                <div className="flex animate-scroll-left gap-3 whitespace-nowrap">
+                  {[...skillsRow2, ...skillsRow2].map((skill, index) => (
+                    <div 
+                      key={`row2-${index}`}
+                      className="inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors border-transparent bg-secondary text-secondary-foreground shadow hover:bg-secondary/80 flex-shrink-0"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
