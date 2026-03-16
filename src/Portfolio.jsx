@@ -40,8 +40,8 @@ export default function Portfolio() {
       id: 4,
       company: "Whitman Health and Counseling Center",
       role: "Data Intern",
-      period: "May 2025 - July 2025",
-      location: "Walla Walla, WA", 
+      period: "Apr 2025 - May 2025",
+      location: "Walla Walla, WA",
       description: "As a Data Intern at the Whitman Health and Counseling Center during Summer 2025, I was responsible for analyzing large-scale student health survey datasets using Python in Google Colab. I worked with 50,000+ multi-year records to clean, process, and ensure 99% data accuracy, while developing demographic-based visualizations to identify key mental health and academic well-being trends. I also collaborated with health administrators to translate findings into actionable insights, improving service targeting for the entire student population by 35%.",
       logo: "/logos/whitman.png",
       link: "https://whitman.edu/"
