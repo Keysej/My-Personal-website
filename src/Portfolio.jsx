@@ -330,7 +330,7 @@ export default function Portfolio() {
           >
             <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
               <p>
-                Computer Science student at St. Olaf College with hands-on experience in cybersecurity, machine learning, and full-stack development. Currently reducing security vulnerabilities by 40% as an Information Security Analyst while building scalable payment systems at Tapay. I develop AI-powered applications and data analytics platforms that solve real-world problems for 50+ users and organizations.
+                Hi, I'm Jimale, a Computer Science, Stat & Data Science student at St. Olaf College with hands-on experience in software engineering, security, and applied ML. I have a strong foundation in data engineering and a passion for machine learning. My goal is to leverage my technical skills to deliver impactful solutions and transition into a machine learning engineering role. Building tech to elevate people.
               </p>
             </div>
           </motion.div>
