@@ -198,7 +198,11 @@ export default function Portfolio() {
       id: 1,
       title: "HMH HeatMap Hackathon — Burn Care Access Analysis",
       period: "March 2026",
-      description: "• Analyzed burn care access gaps across the U.S. as part of Team 19 at the HMH HeatMap Hackathon\n• Built a data pipeline to calculate road distances from 136,760 simulated burn injury locations to the nearest ABA-certified burn centers\n• Applied K-Means clustering to identify underserved counties and built interactive maps to visualize access gaps\n• Key finding: patients in the Mountain West travel an average of 200+ miles to reach the nearest burn center\n• Results informed targeted hospital investment recommendations across 5 regions including Hawaii, Alaska, Idaho, New Mexico, and the Gulf Coast"
+      description: "• Analyzed burn care access gaps across the U.S. as part of Team 19 at the HMH HeatMap Hackathon\n• Built a data pipeline to calculate road distances from 136,760 simulated burn injury locations to the nearest ABA-certified burn centers\n• Applied K-Means clustering to identify underserved counties and built interactive maps to visualize access gaps\n• Key finding: patients in the Mountain West travel an average of 200+ miles to reach the nearest burn center\n• Results informed targeted hospital investment recommendations across 5 regions including Hawaii, Alaska, Idaho, New Mexico, and the Gulf Coast",
+      images: [
+        "/Screenshot 2026-03-29 at 5.41.01 PM.png",
+        "/Screenshot 2026-03-29 at 5.41.10 PM.png"
+      ]
     },
   ];
 
@@ -622,12 +626,29 @@ export default function Portfolio() {
                     className="rounded-lg bg-card text-card-foreground p-6 border"
                   >
                     <div className="flex justify-between items-start mb-3">
-                      <h3 className="font-semibold text-lg">{experiment.title}</h3>
-                      <span className="text-sm text-muted-foreground">{experiment.period}</span>
+                      <div className="flex items-center gap-2">
+                        {experiment.images && (
+                          <span className="text-xl">🏥</span>
+                        )}
+                        <h3 className="font-semibold text-lg">{experiment.title}</h3>
+                      </div>
+                      <span className="text-sm text-muted-foreground shrink-0 ml-2">{experiment.period}</span>
                     </div>
-                    <div className="text-sm text-muted-foreground whitespace-pre-line">
+                    <div className="text-sm text-muted-foreground whitespace-pre-line mb-4">
                       {experiment.description}
                     </div>
+                    {experiment.images && (
+                      <div className="grid grid-cols-1 gap-3 mt-4">
+                        {experiment.images.map((src, i) => (
+                          <img
+                            key={i}
+                            src={src}
+                            alt={`${experiment.title} visual ${i + 1}`}
+                            className="rounded-md border w-full object-cover"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
