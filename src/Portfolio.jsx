@@ -196,12 +196,18 @@ export default function Portfolio() {
   const experiments = [
     {
       id: 1,
+      title: "HMH HeatMap Hackathon — Burn Care Access Analysis",
+      period: "March 2026",
+      description: "• Analyzed burn care access gaps across the U.S. as part of Team 19 at the HMH HeatMap Hackathon\n• Built a data pipeline to calculate road distances from 136,760 simulated burn injury locations to the nearest ABA-certified burn centers\n• Applied K-Means clustering to identify underserved counties and built interactive maps to visualize access gaps\n• Key finding: patients in the Mountain West travel an average of 200+ miles to reach the nearest burn center\n• Results informed targeted hospital investment recommendations across 5 regions including Hawaii, Alaska, Idaho, New Mexico, and the Gulf Coast"
+    },
+    {
+      id: 2,
       title: "Kaggle Playground Series",
       period: "Ongoing",
       description: "• Built and iterated on ML pipelines for tabular prediction problems\n• Practiced feature engineering, model tuning, and validation strategies\n• Explored LightGBM, XGBoost, and neural baselines with leaderboard feedback"
     },
     {
-      id: 2,
+      id: 3,
       title: "NVIDIA Deep Learning Institute — Fundamentals of Deep Learning",
       period: "March 2024",
       description: "• Completed hands-on training covering CNNs, transfer learning, and NLP\n• Applied concepts directly to academic and personal ML projects"
