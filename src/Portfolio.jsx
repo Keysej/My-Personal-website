@@ -200,8 +200,8 @@ export default function Portfolio() {
       period: "March 2026",
       description: "• Analyzed burn care access gaps across the U.S. as part of Team 19 at the HMH HeatMap Hackathon\n• Built a data pipeline to calculate road distances from 136,760 simulated burn injury locations to the nearest ABA-certified burn centers\n• Applied K-Means clustering to identify underserved counties and built interactive maps to visualize access gaps\n• Key finding: patients in the Mountain West travel an average of 200+ miles to reach the nearest burn center\n• Results informed targeted hospital investment recommendations across 5 regions including Hawaii, Alaska, Idaho, New Mexico, and the Gulf Coast",
       images: [
-        "/Screenshot 2026-03-29 at 5.41.01 PM.png",
-        "/Screenshot 2026-03-29 at 5.41.10 PM.png"
+        "/heatmap-burden-map.png",
+        "/heatmap-running-start.png"
       ]
     },
   ];
