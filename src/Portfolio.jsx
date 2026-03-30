@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
   const [expandedWork, setExpandedWork] = useState(null);
+  const [expandedResults, setExpandedResults] = useState({});
 
   const workExperience = [
     {
@@ -638,15 +639,28 @@ export default function Portfolio() {
                       {experiment.description}
                     </div>
                     {experiment.images && (
-                      <div className="grid grid-cols-1 gap-3 mt-4">
-                        {experiment.images.map((src, i) => (
-                          <img
-                            key={i}
-                            src={src}
-                            alt={`${experiment.title} visual ${i + 1}`}
-                            className="rounded-md border w-full object-cover"
-                          />
-                        ))}
+                      <div className="mt-4">
+                        <button
+                          onClick={() => setExpandedResults(prev => ({ ...prev, [experiment.id]: !prev[experiment.id] }))}
+                          className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform ${expandedResults[experiment.id] ? "rotate-90" : ""}`}>
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                          {expandedResults[experiment.id] ? "Hide Results" : "View Results"}
+                        </button>
+                        {expandedResults[experiment.id] && (
+                          <div className="grid grid-cols-1 gap-3 mt-3">
+                            {experiment.images.map((src, i) => (
+                              <img
+                                key={i}
+                                src={src}
+                                alt={`${experiment.title} visual ${i + 1}`}
+                                className="rounded-md border w-full object-cover"
+                              />
+                            ))}
+                          </div>
+                        )}
                       </div>
                     )}
                   </motion.div>
