@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
   const [expandedWork, setExpandedWork] = useState(null);
-  const [expandedResults, setExpandedResults] = useState({});
 
   const workExperience = [
     {
