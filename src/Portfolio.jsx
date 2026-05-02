@@ -197,13 +197,11 @@ export default function Portfolio() {
   const experiments = [
     {
       id: 1,
-      title: "HMH HeatMap Hackathon — Burn Care Access Analysis",
+      title: "HMH Heatmap — Burn Care Access Gap (United States)",
       period: "March 2026",
-      description: "• Analyzed burn care access gaps across the U.S. as part of Team 19 at the HMH HeatMap Hackathon\n• Built a data pipeline to calculate road distances from 136,760 simulated burn injury locations to the nearest ABA-certified burn centers\n• Applied K-Means clustering to identify underserved counties and built interactive maps to visualize access gaps\n• Key finding: patients in the Mountain West travel an average of 200+ miles to reach the nearest burn center\n• Results informed targeted hospital investment recommendations across 5 regions including Hawaii, Alaska, Idaho, New Mexico, and the Gulf Coast",
-      images: [
-        "/heatmap-burden-map.png",
-        "/heatmap-running-start.png"
-      ]
+      tags: ["Leaflet", "Python", "GeoPandas", "GitHub Pages"],
+      description: "An interactive choropleth map built for the HMH HeatMap Hackathon that visualizes burn care access gaps across all 3,144 US counties. Each county is shaded by road-network distance to the nearest ABA-certified burn center, derived from 136,760 simulated burn injury locations.",
+      link: "https://keysej.github.io/HMH-Heatmap-Interactive/"
     },
   ];
 
@@ -635,33 +633,32 @@ export default function Portfolio() {
                       </div>
                       <span className="text-sm text-muted-foreground shrink-0 ml-2">{experiment.period}</span>
                     </div>
-                    <div className="text-sm text-muted-foreground whitespace-pre-line mb-4">
+                    <div className="text-sm text-muted-foreground mb-4">
                       {experiment.description}
                     </div>
-                    {experiment.images && (
-                      <div className="mt-4">
-                        <button
-                          onClick={() => setExpandedResults(prev => ({ ...prev, [experiment.id]: !prev[experiment.id] }))}
-                          className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform ${expandedResults[experiment.id] ? "rotate-90" : ""}`}>
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                          </svg>
-                          {expandedResults[experiment.id] ? "Hide Results" : "View Results"}
-                        </button>
-                        {expandedResults[experiment.id] && (
-                          <div className="grid grid-cols-1 gap-3 mt-3">
-                            {experiment.images.map((src, i) => (
-                              <img
-                                key={i}
-                                src={src}
-                                alt={`${experiment.title} visual ${i + 1}`}
-                                className="rounded-md border w-full object-cover"
-                              />
-                            ))}
-                          </div>
-                        )}
+                    {experiment.tags && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {experiment.tags.map((tag) => (
+                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full border font-medium text-muted-foreground">
+                            {tag}
+                          </span>
+                        ))}
                       </div>
+                    )}
+                    {experiment.link && (
+                      <a
+                        href={experiment.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        View Interactive Map
+                      </a>
                     )}
                   </motion.div>
                 ))}
